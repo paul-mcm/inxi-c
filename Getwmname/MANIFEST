@@ -1,0 +1,8 @@
+Changes
+Getwmname.xs
+Makefile.PL
+MANIFEST
+ppport.h
+README
+t/Getwmname.t
+lib/Getwmname.pm
