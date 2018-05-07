@@ -54,7 +54,7 @@ get_wmname()
 	    propname = XInternAtom(disp, "_NET_SUPPORTING_WM_CHECK", False);
 	    if (XGetWindowProperty(disp, DefaultRootWindow(disp), propname, \
 		0, 1024, False, XA_WINDOW, &ret_type, &ret_format, &ret_nitems, \
-		&ret_bytes_after, &prop_1) == Success && (ret_type != XA_WINDOW)) {
+		&ret_bytes_after, &prop_1) == Success && (ret_type == XA_WINDOW)) {
 
 		len = (ret_format / 8) * ret_nitems;
 		if ((name = malloc((ret_format / 8 * ret_nitems) + 1)) != NULL) {
